@@ -30,7 +30,7 @@
             
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 45
-            }, 500, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms เพื่อให้การเลื่อนเร็วขึ้น
+            }, 250, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms เพื่อให้การเลื่อนเร็วขึ้น
             
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
@@ -48,7 +48,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 500, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms
+        $('html, body').animate({scrollTop: 0}, 250, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms
         return false;
     });
 
@@ -61,7 +61,7 @@
     // Screenshot carousel
     $(".screenshot-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 500,
+        smartSpeed: 250,
         loop: true,
         dots: true,
         items: 1
