@@ -16,7 +16,7 @@
 
     // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
+        if ($(this).scrollTop() > 0) {
             $('.navbar').addClass('sticky-top shadow-sm');
         } else {
             $('.navbar').removeClass('sticky-top shadow-sm');
@@ -29,7 +29,7 @@
             event.preventDefault();
             
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
+                scrollTop: $(this.hash).offset().top - 10
             }, 250, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms เพื่อให้การเลื่อนเร็วขึ้น
             
             if ($(this).parents('.navbar-nav').length) {
@@ -41,27 +41,27 @@
     
     // Back to top button
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 50) {
             $('.back-to-top').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 250, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms
+        $('html, body').animate({scrollTop: 0}, 80, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms
         return false;
     });
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
+        delay: 2,
+        time: 100
     });
 
     // Screenshot carousel
     $(".screenshot-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 250,
+        smartSpeed: 100,
         loop: true,
         dots: true,
         items: 1
@@ -70,7 +70,7 @@
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 250,
         loop: true,
         center: true,
         dots: false,
