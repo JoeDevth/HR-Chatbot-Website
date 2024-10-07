@@ -61,7 +61,7 @@
     // Screenshot carousel
     $(".screenshot-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 500,
         loop: true,
         dots: true,
         items: 1
