@@ -29,8 +29,8 @@
             event.preventDefault();
             
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 10
-            }, 250, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms เพื่อให้การเลื่อนเร็วขึ้น
+                scrollTop: $(this.hash).offset().top -1
+            }, 500, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms เพื่อให้การเลื่อนเร็วขึ้น
             
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
@@ -48,20 +48,20 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 80, 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms
+        $('html, body').animate({scrollTop: 0}, 10 , 'easeInOutExpo'); // ปรับเวลาจาก 1500ms เป็น 500ms
         return false;
     });
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
-        delay: 2,
+        delay: 1,
         time: 100
     });
 
     // Screenshot carousel
     $(".screenshot-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 100,
+        smartSpeed: 500,
         loop: true,
         dots: true,
         items: 1
@@ -70,7 +70,7 @@
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 250,
+        smartSpeed: 300,
         loop: true,
         center: true,
         dots: false,
